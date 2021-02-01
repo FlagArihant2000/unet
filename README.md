@@ -8,7 +8,17 @@ An encoder - decoder framework is a useful concept in deep learning, that utilis
 
 In U - Net, the corresponding stage in encoder framework is copied and cropped onto the the decoder step. Intuitively, this represents the incorporation of lower level features that are obtained during the initial stages of convolutions.
 
+## Implementation Pipeline
+
+1. Identify pixel classes in labels.
+2. Loading training, validation and test data.
+3. Initialization of architecture. Here, vanilla U - Net and ResNet based U - Net is implemented.
+4. Initialization of cross entropy loss, with Adam optimizer.
+5. Set number of epochs and start the training loop. Perform validation after one iteration over the train data. Store the training and validation loss at each step. Plot the graph after the required number of epochs is attained.
+6. Use test data for estimating the average Jaccard Index (IoU) over the set.
+7. Results visualization.
+
 Original Paper: [Link](https://arxiv.org/pdf/1505.04597.pdf)
 
-Results for this particular repository, along with code execution steps will be added later.
+To Do: Add results (for vanilla U - Net and ResNet based U - Net).
 
